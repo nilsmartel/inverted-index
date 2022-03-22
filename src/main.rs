@@ -25,7 +25,7 @@ fn main() {
     }
 
     for term in ir.inverted_index.keys() {
-        let doc = ir.inverted_index.get(term);
+        let doc = ir.inverted_index.get(term).unwrap();
         println!("{term}:   {doc:?}");
     }
 }
